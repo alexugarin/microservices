@@ -1,0 +1,7 @@
+spring:
+  active:
+    profiles: test
+
+my:
+  property:
+    description: test profile user-service-description

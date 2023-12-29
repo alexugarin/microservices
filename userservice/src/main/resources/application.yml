@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: ${PROFILE}
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER_URL}
+

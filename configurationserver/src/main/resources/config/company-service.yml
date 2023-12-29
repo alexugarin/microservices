@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+my:
+  property:
+    description: company-service-description
+
+spring:
+  datasource:
+    url: jdbc:postgresql://0.0.0.0:5433/microservices?currentSchema=company-schema
+    username: user
+    password: password
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: company-service-group
+      topic:
+        company-deleted-user: company-deleted-user-topic
+    producer:
+      group-id: company-service-group
+      topic:
+        company-deleted: company-deleted-topic
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8085/eureka
